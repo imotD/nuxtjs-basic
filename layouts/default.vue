@@ -1,20 +1,21 @@
 <template>
   <div>
+    <header>
+      <nuxt-link to="/about">About</nuxt-link>
+      <nuxt-link to="/user">User</nuxt-link>
+      <nuxt-link to="/blog">Blog</nuxt-link>
+    </header>
     <Nuxt />
+    <footer>
+      <p>&copy; 2021 - imotD.Nuxt</p>
+    </footer>
   </div>
 </template>
 
 <style>
 html {
-  font-family:
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
+  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
@@ -22,6 +23,9 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+  margin: auto;
+  text-align: center;
+  padding-top: 40px;
 }
 
 *,

@@ -5,9 +5,6 @@
       <h1 class="title">
         nuxtBasic
       </h1>
-      <nuxt-link to="/about">About</nuxt-link>
-      <nuxt-link to="/user">User</nuxt-link>
-      <nuxt-link to="/blog">Blog</nuxt-link>
       <div class="links">
         <a
           href="https://nuxtjs.org/"
