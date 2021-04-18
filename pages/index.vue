@@ -5,6 +5,8 @@
       <h1 class="title">
         nuxtBasic
       </h1>
+      <nuxt-link to="/about">About</nuxt-link>
+      <nuxt-link to="/blog">Blog</nuxt-link>      
       <div class="links">
         <a
           href="https://nuxtjs.org/"
@@ -28,7 +30,7 @@
 </template>
 
 <script>
-export default {}
+export default {};
 </script>
 
 <style>
@@ -42,16 +44,8 @@ export default {}
 }
 
 .title {
-  font-family:
-    'Quicksand',
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
+  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   display: block;
   font-weight: 300;
   font-size: 100px;
