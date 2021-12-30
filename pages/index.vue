@@ -1,5 +1,8 @@
 <template>
-  <Tutorial/>
+  <div class="container">
+    <Hero />
+    <LargeCardDisplay />
+  </div>
 </template>
 
 <script>
