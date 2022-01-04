@@ -17,14 +17,12 @@
 </template>
 
 <script>
-export default {
-
-}
+export default {};
 </script>
 
 <style scoped>
 .Hero {
-  height: 50vh;
+  height: 100vh;
   position: relative;
   display: flex;
   padding: 5rem 0;
