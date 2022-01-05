@@ -4,7 +4,9 @@
     <p class="snippet">
       {{ cardSection.snippet }}
     </p>
-    <div class="cards-container"></div>
+    <div class="cards-container">
+      <LargeCard v-for="card in cardSection.cards" :key="card.id" :card="card" />
+    </div>
   </div>
 </template>
 

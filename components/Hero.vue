@@ -26,7 +26,7 @@ export default {};
   position: relative;
   display: flex;
   padding: 5rem 0;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
 }
 .text-container {
