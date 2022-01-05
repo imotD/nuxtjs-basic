@@ -3,7 +3,9 @@
 </template>
 
 <script>
-export default {};
+export default {
+  layout: "no-nav",
+};
 </script>
 
 <style lang="scss" scoped></style>

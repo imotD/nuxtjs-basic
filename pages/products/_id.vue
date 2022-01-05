@@ -1,53 +1,57 @@
 <template>
-  <div v-if="product" class="container py-5">
-    <div class="hero-container">
-      <img
-        :src="`https://picsum.photos/seed/${product.id}/400`"
-        alt=""
-        class="image"
-      />
-      <div class="info-box">
-        <h1>{{ product.title }}</h1>
-        <p class="snippet">{{ product.snippet }}</p>
+  <div>
+    <div v-if="product" class="container py-5">
+      <div class="hero-container">
+        <img
+          :src="`https://picsum.photos/seed/${product.id}/400`"
+          alt=""
+          class="image"
+        />
+        <div class="info-box">
+          <h1>{{ product.title }}</h1>
+          <p class="snippet">{{ product.snippet }}</p>
+        </div>
+      </div>
+      <div class="whats-included-container">
+        <div class="included-container">
+          <h6>Super Effective</h6>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores,
+            dolorem.
+          </p>
+        </div>
+        <div class="included-container">
+          <h6>Clean & Tidy</h6>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores,
+            dolorem.
+          </p>
+        </div>
+        <div class="included-container">
+          <h6>Cancel Anytime</h6>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores,
+            dolorem.
+          </p>
+        </div>
+        <div class="included-container">
+          <h6>Satisfaction Guaranteed</h6>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores,
+            dolorem.
+          </p>
+        </div>
+      </div>
+      <div class="description-container">
+        <p>
+          {{ product.description }}
+        </p>
       </div>
     </div>
-    <div class="whats-included-container">
-      <div class="included-container">
-        <h6>Super Effective</h6>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores,
-          dolorem.
-        </p>
-      </div>
-      <div class="included-container">
-        <h6>Clean & Tidy</h6>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores,
-          dolorem.
-        </p>
-      </div>
-      <div class="included-container">
-        <h6>Cancel Anytime</h6>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores,
-          dolorem.
-        </p>
-      </div>
-      <div class="included-container">
-        <h6>Satisfaction Guaranteed</h6>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores,
-          dolorem.
-        </p>
-      </div>
-    </div>
-    <div class="description-container">
-      <p>
-        {{ product.description }}
-      </p>
+    <div v-else class="container padding">
+      <PageNotFound />
     </div>
   </div>
-  <div v-else class="container padding">Page Not Found</div>
 </template>
 
 <script>

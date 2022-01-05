@@ -13,7 +13,7 @@
 <script>
 export default {
   props: {
-    cardSection: String,
+    cardSection: Object,
   },
 };
 </script>
