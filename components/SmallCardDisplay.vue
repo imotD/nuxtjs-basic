@@ -4,13 +4,13 @@
       <h3 class="header">
         {{ cardsSection.title }}
       </h3>
-    </div>
-    <div class="card-container">
-      <SmallCard
-        v-for="card in cardsSection.cards"
-        :key="card.id"
-        :card="card"
-      />
+      <div class="card-container">
+        <SmallCard
+          v-for="card in cardsSection.cards"
+          :key="card.id"
+          :card="card"
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -24,6 +24,7 @@ export default {
 <style scoped>
 .container {
   padding: 2rem 0;
+  margin-top: 5rem;
 }
 .header {
   font-weight: 700;
