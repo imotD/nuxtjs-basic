@@ -1,12 +1,12 @@
 <template>
-  <div class="card-container">
+  <NuxtLink :to="`/products/${card.id}`" class="card-container">
     <img
       :src="`https://picsum.photos/seed/${card.id}/400`"
       alt="image"
       class="image"
     />
     {{ card }}
-  </div>
+  </NuxtLink>
 </template>
 
 <script>
