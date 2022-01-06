@@ -3,7 +3,7 @@
     <b-button id="show-btn" @click="showModal">Rent</b-button>
 
     <b-modal ref="my-modal" hide-footer title="Using Component Methods">
-      <div class="calender-container">
+      <div class="calendar-container">
         <div class="text-container">
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae
@@ -13,8 +13,9 @@
             Repudiandae qui id voluptate accusamus, in inventore?
           </p>
         </div>
-        <b-button id="show-btn" variant="outline-danger">Order</b-button>
+        <vc-date-picker :value="null" color="indigo" is-dark is-range />
       </div>
+      <b-button id="show-btn" variant="outline-danger">Order</b-button>
     </b-modal>
   </div>
 </template>
