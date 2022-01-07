@@ -1,6 +1,13 @@
 <template>
   <div class="app">
-    <p>This is Testing</p>
     <Nuxt />
   </div>
 </template>
+
+<script>
+export default {
+  name: 'App'
+}
+</script>
+
+<style lang="scss" scoped></style>
