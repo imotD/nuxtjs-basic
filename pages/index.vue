@@ -3,13 +3,15 @@
     <Hero />
 
     <div class="container search">
-      <input @keyup.enter="$fetch" v-model.lazy="searchInput" type="text" placeholder="Search">
-      <button @click="clearSearch" v-show="searchInput !== ''" class="button">
+      <input v-model.lazy="searchInput" type="text" placeholder="Search" @keyup.enter="$fetch">
+      <button v-show="searchInput !== ''" class="button" @click="clearSearch">
         Clear Search
       </button>
     </div>
 
-    <div class="container movies">
+    <Loading v-if="$fetchState.pending" />
+
+    <div v-else class="container movies">
       <div v-if="searchInput !== ''" id="movie-grid" class="movies-grid">
         <div v-for="(movie,index) in searchedMovies" :key="index" class="movie">
           <div class="movie-img">
@@ -100,8 +102,11 @@ export default {
       await this.getMovies()
       return
     }
-    await this.searchMovies()
+    if (this.searchInput !== '') {
+      await this.searchMovies()
+    }
   },
+  fetchDelay: 1000,
   methods: {
     async getMovies () {
       const data = axios.get('https://api.themoviedb.org/3/movie/now_playing?api_key=37ed43a4f8eaa2abd75f9283692947bc&language=en-US&page=1')
@@ -109,7 +114,7 @@ export default {
       result.data.results.forEach((movie) => {
         this.movies.push(movie)
       })
-      // console.log(result.data)
+      console.log('hi')
     },
     async searchMovies () {
       const data = axios.get(
