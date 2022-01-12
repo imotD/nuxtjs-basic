@@ -107,6 +107,21 @@ export default {
     }
   },
   fetchDelay: 1000,
+  head: {
+    title: 'Movie App Tutorial - Latest Straming Movie Info',
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Get all the latest streaming movies in theaters & online'
+      },
+      {
+        hid: 'keywords',
+        name: 'keywords',
+        content: 'movies, stream, stremaing'
+      }
+    ]
+  },
   methods: {
     async getMovies () {
       const data = axios.get('https://api.themoviedb.org/3/movie/now_playing?api_key=37ed43a4f8eaa2abd75f9283692947bc&language=en-US&page=1')
