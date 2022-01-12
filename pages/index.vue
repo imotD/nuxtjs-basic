@@ -30,7 +30,7 @@
             </p>
             <p class="release">
               Released :
-             {{
+              {{
                 new Date(movie.release_date).toLocaleString('en-us', {
                   month: 'long',
                   day: 'numeric',
@@ -40,7 +40,7 @@
             </p>
             <NuxtLink
               class="button button-light"
-              :to="{ name: 'movies-id', params: { id: movie.id } }"
+              :to="{ name: 'movies-movieid', params: { movieid: movie.id }}"
             >
               Get More Info
             </NuxtLink>
@@ -65,7 +65,7 @@
             </p>
             <p class="release">
               Released :
-             {{
+              {{
                 new Date(movie.release_date).toLocaleString('en-us', {
                   month: 'long',
                   day: 'numeric',
@@ -75,7 +75,7 @@
             </p>
             <NuxtLink
               class="button button-light"
-              :to="{ name: 'movies-id', params: { id: movie.id } }"
+              :to="{ name: 'movies-movieid', params: { movieid: movie.id }}"
             >
               Get More Info
             </NuxtLink>
@@ -114,7 +114,6 @@ export default {
       result.data.results.forEach((movie) => {
         this.movies.push(movie)
       })
-      console.log('hi')
     },
     async searchMovies () {
       const data = axios.get(
